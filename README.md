@@ -1,1 +1,5 @@
 # Unit-11-Express-Homework-Note-Taker
+This app is an application that allows the user to, well, take notes. The user enters input within a field after clicking the create a note button located at the type of the screens. The notes are then saved to the server and kept there untill deleted by the user. I, however, was ultimately unable to get the note deletion button to actually work so my notes are stuck forever until I fix that. The techonlogies utilized here are JavaScript, CSS, and HTML. The CSS and HTML were provided to us while we had to get a server up and running as well as establish routes for wish the front end could "speak" to the backend. Once we were able to establish a valid local connection, the app was deployed to heroku to be able to be accessed more publicly as a fully deployed application.
+
+DEMO ----------------------------------------------------------------------------------------------------------------------------------------
+![github]https://user-images.githubusercontent.com/69816143/94982073-9522e700-0505-11eb-9b98-ff2548101c1e.gif
