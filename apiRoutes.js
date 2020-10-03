@@ -1,14 +1,9 @@
 const { v4: uuidv4 } = require('uuid');
 const fs = require ("fs");
 
-// ===============================================================================
-// ROUTING
-// ===============================================================================
 
 module.exports = function(app) {
   // API GET Requests
-
-   // /api/notes should read the db.json file and return all saved notes as JSON
   app.get('/api/notes', function (req, res) {
     fs.readFile("db/db.json", "utf8", function(error,data) {
       res.json(JSON.parse(data));
@@ -17,8 +12,6 @@ module.exports = function(app) {
   });
 
   // API POST Requests
-
-  // ---------------------------------------------------------------------------
 
   // Should receive a new note to save on the request body, add it to the db.json file, and then return the new note to the client
     app.post("/api/notes", function(req, res) {
@@ -41,7 +34,7 @@ module.exports = function(app) {
     //  give each note a unique id when it's saved. 
     //  to delete a note, you'll need to read all notes from the db.json file, 
     // remove the note with the given id property, and then rewrite the notes to the db.json file.
-    app.delete("/api/notes/:id", function(req, res) {
+    app.delete("api/notes/:id", function(req, res) {
       fs.readFile("db/db.json", "utf8", function(error, data) {
         let noteId = req.params.id;
         let noteData = JSON.parse(data);
@@ -62,4 +55,3 @@ module.exports = function(app) {
     });
 
 };
-© 2020 GitHub, Inc.
